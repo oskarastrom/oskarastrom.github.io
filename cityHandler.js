@@ -1,7 +1,7 @@
 import * as THREE from 'three';
 import { startCameraAnimation } from './cameraHandler.js';
 import { generateHDR } from './HDR_handler.js';
-import { directionalLight, loadCityMesh } from './MeshMaker.js';
+import { directionalLight, loadCityMesh } from './meshMaker.js';
 import { createText, loadFonts } from './textHandler.js';
 import { hideText, showText } from './UI.js';
 import { loadViews, loadDistrictView, loadLocationView, getDistrictNames, getLocationNames } from './views.js';
