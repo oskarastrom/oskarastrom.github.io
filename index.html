@@ -4,10 +4,81 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Oskar's Resume</title>
+    <title>Oskar Åström</title>
   </head>
   <body>
-    <div id="app"></div>
+    <canvas id="bg"></canvas>
+	<div id="infoBox"> 
+		<div id="infoTitle">
+			Modelon
+		</div>
+		<div id="infoText">
+			Hello there, my name is Oskar
+		</div>
+	</div>
+	<link rel="stylesheet" href="./style.css" type="text/css" />
+    <script id="fs-hdr" type="x-shader/x-fragment">
+
+			uniform sampler2D   tDiffuse;
+			uniform float       exposure;
+			uniform float       brightMax;
+
+			varying vec2  vUv;
+
+			vec3 decode_pnghdr( const in vec4 color ) {
+
+				vec4 rgbcolor = vec4( 0.0, 0.0, 0.0, 0.0 );
+
+				if ( color.w > 0.0 ) {
+					float f = pow(2.0, 127.0*(color.w-0.5));
+					rgbcolor.xyz = color.xyz * f;
+				}
+				return rgbcolor.xyz;
+
+				/*
+				// remove gamma correction
+				vec4 res = color * color;
+				// decoded RI
+				float ri = pow( 2.0, res.w * 32.0 - 16.0 );
+				// decoded HDR pixel
+				res.xyz = res.xyz * ri;
+				return res.xyz;
+				*/
+			}
+
+			void main()	{
+
+				vec4 color = texture2D( tDiffuse, vUv );
+				color.xyz  = decode_pnghdr( color );
+
+				// apply gamma correction and exposure
+				//gl_FragColor = vec4( pow( exposure * color.xyz, vec3( 0.474 ) ), 1.0 );
+
+				// Perform tone-mapping
+				float Y = dot(vec4(0.30, 0.59, 0.11, 0.0), color);
+				float YD = exposure * (exposure/brightMax + 1.0) / (exposure + 1.0);
+				color *= YD;
+
+				gl_FragColor = vec4( color.xyz, 1.0 );
+
+			}
+
+		</script>
+    <script id="vs-hdr" type="x-shader/x-vertex">
+
+			varying vec2 vUv;
+
+			void main()	{
+
+				vUv  = uv;
+				gl_Position = projectionMatrix * modelViewMatrix * vec4( position, 1.0 );
+
+			}
+
+		</script>
+
+    <script type="module" src="/meshMaker.js"></script>
     <script type="module" src="/main.js"></script>
+    <script type="module" src="/textHandler.js"></script>
   </body>
 </html>
