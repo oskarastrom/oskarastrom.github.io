@@ -1,7 +1,7 @@
 
-import * as THREE from 'https://cdn.skypack.dev/three';
-import {OrbitControls} from 'https://cdn.skypack.dev/three/examples/jsm/controls/OrbitControls.js';
-import {FirstPersonControls} from 'https://cdn.skypack.dev/three/examples/jsm/controls/FirstPersonControls.js';
+import * as THREE from 'three';
+import {OrbitControls} from 'https://cdn.jsdelivr.net/npm/three/examples/jsm/controls/OrbitControls.js';
+import {FirstPersonControls} from 'https://cdn.jsdelivr.net/npm/three/examples/jsm/controls/FirstPersonControls.js';
 import {getCamInfo} from "./cityHandler.js";
 
 const animationMoveTime = 1;

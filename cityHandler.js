@@ -1,4 +1,4 @@
-import * as THREE from 'https://cdn.skypack.dev/three';
+import * as THREE from 'three';
 import { startCameraAnimation } from './cameraHandler.js';
 import { generateHDR } from './HDR_handler.js';
 import { directionalLight, loadCityMesh } from './MeshMaker.js';

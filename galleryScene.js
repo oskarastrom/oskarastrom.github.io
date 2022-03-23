@@ -1,4 +1,4 @@
-import * as THREE from 'https://cdn.skypack.dev/three';
+import * as THREE from 'three';
 import { directionalLight, loadGalleryMesh } from './MeshMaker.js';
 const galleryScene = new THREE.Scene();
 window.galleryScene = galleryScene;

@@ -1,4 +1,4 @@
-import * as THREE from 'https://cdn.skypack.dev/three';
+import * as THREE from 'three';
 
 const c1 = new THREE.Color(1, 0.6, 0.3);
 const c2 = new THREE.Color(0.5, 0.8, 1.0);

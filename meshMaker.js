@@ -1,5 +1,5 @@
-import * as THREE from 'https://cdn.skypack.dev/three';
-import { FBXLoader } from 'https://cdn.skypack.dev/three/examples/jsm/loaders/FBXLoader.js';
+import * as THREE from 'three';
+import { FBXLoader } from 'https://cdn.jsdelivr.net/npm/three/examples/jsm/loaders/FBXLoader.js';
 import { setCity } from './cityHandler.js';
 import { setGallery } from './galleryScene.js';
 

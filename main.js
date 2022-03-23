@@ -1,6 +1,6 @@
 
 
-import * as THREE from 'https://cdn.skypack.dev/three';
+import * as THREE from 'three';
 import { hoverCity, updateCity, clickCity, retreatViewMode, loadCity } from './cityHandler.js'
 import { isMoving, loadCamera, cameraKeyInput, updateCamera } from './cameraHandler.js';
 import { loadGallery } from './galleryScene.js';
