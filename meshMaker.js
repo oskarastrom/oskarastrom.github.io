@@ -1,6 +1,5 @@
-import * as THREE from 'three';
-import { Mesh, PlaneGeometry } from 'three';
-import { FBXLoader } from 'three/examples/jsm/loaders/FBXLoader.js';
+import * as THREE from 'https://cdn.skypack.dev/three';
+//import { FBXLoader } from 'three/examples/jsm/loaders/FBXLoader.js';
 import { setCity } from './cityHandler.js';
 import { setGallery } from './galleryScene.js';
 

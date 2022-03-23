@@ -1,13 +1,12 @@
-import './style.css'
+
 
 import * as THREE from 'https://cdn.skypack.dev/three';
-import { WebGLRenderer } from 'three';
 import { hoverCity, updateCity, clickCity, retreatViewMode, loadCity } from './cityHandler'
 import { isMoving, loadCamera, cameraKeyInput, updateCamera } from './cameraHandler';
 import { loadGallery } from './galleryScene';
 
 //Scene setup
-const renderer = new WebGLRenderer({
+const renderer = new THREE.WebGLRenderer({
     canvas: document.querySelector('#bg'),
 });
 window.renderer = renderer;

@@ -2,7 +2,7 @@
 import * as THREE from 'https://cdn.skypack.dev/three';
 import {OrbitControls} from 'https://cdn.skypack.dev/three/examples/jsm/controls/OrbitControls.js';
 import {FirstPersonControls} from 'https://cdn.skypack.dev/three/examples/jsm/controls/FirstPersonControls.js';
-import { Vector3 } from 'three';
+import { Vector3 } from 'https://cdn.skypack.dev/three';
 import {getCamInfo} from "./cityHandler";
 
 const animationMoveTime = 1;
