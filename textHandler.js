@@ -1,4 +1,4 @@
-import { TTFLoader } from 'https://cdn.jsdelivr.net/npm/three/examples/jsm/controls/OrbitControls.js';
+import { TTFLoader } from 'https://cdn.jsdelivr.net/npm/three/examples/jsm/loaders/TTFLoader.js';
 import { Font } from 'https://cdn.jsdelivr.net/npm/three/examples/jsm/loaders/FontLoader.js';
 import { TextGeometry } from 'https://cdn.jsdelivr.net/npm/three/examples/jsm/geometries/TextGeometry.js';
 import * as THREE from 'three';
