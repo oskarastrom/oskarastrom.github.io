@@ -1,5 +1,5 @@
 import * as THREE from 'three';
-import { directionalLight, loadGalleryMesh } from './MeshMaker.js';
+import { directionalLight, loadGalleryMesh } from './meshMaker.js';
 const galleryScene = new THREE.Scene();
 window.galleryScene = galleryScene;
 let gallery;
