@@ -1,10 +1,10 @@
 import * as THREE from 'https://cdn.skypack.dev/three';
-import { startCameraAnimation } from './cameraHandler';
-import { generateHDR } from './HDR_handler';
-import { directionalLight, loadCityMesh } from './MeshMaker';
-import { createText, loadFonts } from './textHandler';
-import { hideText, showText } from './UI';
-import { loadViews, loadDistrictView, loadLocationView, getDistrictNames, getLocationNames } from './views';
+import { startCameraAnimation } from './cameraHandler.js';
+import { generateHDR } from './HDR_handler.js';
+import { directionalLight, loadCityMesh } from './MeshMaker.js';
+import { createText, loadFonts } from './textHandler.js';
+import { hideText, showText } from './UI.js';
+import { loadViews, loadDistrictView, loadLocationView, getDistrictNames, getLocationNames } from './views.js';
 
 let cityScene = new THREE.Scene();
 window.cityScene = cityScene;

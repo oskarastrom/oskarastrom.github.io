@@ -1,5 +1,5 @@
 import * as THREE from 'https://cdn.skypack.dev/three';
-import { directionalLight, loadGalleryMesh } from './MeshMaker';
+import { directionalLight, loadGalleryMesh } from './MeshMaker.js';
 const galleryScene = new THREE.Scene();
 window.galleryScene = galleryScene;
 let gallery;

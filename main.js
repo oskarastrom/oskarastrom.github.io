@@ -1,9 +1,9 @@
 
 
 import * as THREE from 'https://cdn.skypack.dev/three';
-import { hoverCity, updateCity, clickCity, retreatViewMode, loadCity } from './cityHandler'
-import { isMoving, loadCamera, cameraKeyInput, updateCamera } from './cameraHandler';
-import { loadGallery } from './galleryScene';
+import { hoverCity, updateCity, clickCity, retreatViewMode, loadCity } from './cityHandler.js'
+import { isMoving, loadCamera, cameraKeyInput, updateCamera } from './cameraHandler.js';
+import { loadGallery } from './galleryScene.js';
 
 //Scene setup
 const renderer = new THREE.WebGLRenderer({
