@@ -2,7 +2,6 @@
 import * as THREE from 'https://cdn.skypack.dev/three';
 import {OrbitControls} from 'https://cdn.skypack.dev/three/examples/jsm/controls/OrbitControls.js';
 import {FirstPersonControls} from 'https://cdn.skypack.dev/three/examples/jsm/controls/FirstPersonControls.js';
-import { Vector3 } from 'https://cdn.skypack.dev/three';
 import {getCamInfo} from "./cityHandler";
 
 const animationMoveTime = 1;
@@ -147,7 +146,7 @@ export function initCameraPosition(type) {
         const info = getCamInfo();
     
         camera.position.set(0, 10, -40);
-        orbit.target.addVectors(camera.position, new Vector3(0, 0, -20));
+        orbit.target.addVectors(camera.position, new THREE.Vector3(0, 0, -20));
         
         orbit.minPolarAngle = 0;
         orbit.maxPolarAngle = Math.PI;
@@ -165,8 +164,8 @@ export function cameraKeyInput(key, isDown) {
 const euler = new THREE.Euler(0, 0, 0, 'YXZ');
 function moveCamera(deltaTime, dMouse) {
     const dist = cameraVelocity * deltaTime;
-    const forward = camera.getWorldDirection(new Vector3());
-    const side = new Vector3(0, 1, 0).cross(forward);
+    const forward = camera.getWorldDirection(new THREE.Vector3());
+    const side = new THREE.Vector3(0, 1, 0).cross(forward);
     forward.multiplyScalar(dist * (movingDirections.w - movingDirections.s));
     side.multiplyScalar(dist * (movingDirections.a - movingDirections.d));
 
