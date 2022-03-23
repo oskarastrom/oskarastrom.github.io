@@ -20,7 +20,7 @@ var havePointerLock = document.pointerLockElement ||
     document.webkitPointerLockElement;
 console.log(havePointerLock)
 
-let sceneMode = "Gallery";
+let sceneMode = "City";
 
 loadCamera(sceneMode);
 
