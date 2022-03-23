@@ -155,7 +155,8 @@ export function initCameraPosition(type) {
 } 
 
 const cameraVelocity = 40;
-const rotationSpeed = .1*Math.PI/180;
+let rotationSpeed = .1*Math.PI/180;
+window.setCameraSpeed = function(n) { rotationSpeed = n; }
 const movingDirections = {'w': 0, 'a': 0, 's': 0, 'd': 0};
 export function cameraKeyInput(key, isDown) {
     movingDirections[key] = isDown;
