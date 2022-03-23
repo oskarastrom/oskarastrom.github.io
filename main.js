@@ -73,27 +73,38 @@ function onOrbitChanged(event) {
     dragged = true;
 }
 function onMouseDown(event) {
-    setCursorLocked(true)
-    if (event.button == 2) {
-        retreatViewMode()
+    if (sceneMode == "City") {
+        if (event.button == 2) {
+            retreatViewMode()
+        }
+        dragged = false;
+    } else if (sceneMode == "Gallery") {
+        setCursorLocked(true)
     }
-    dragged = false;
 }
 function onMouseUp(event) {
-    if (!dragged) clickCity();
+    if (sceneMode == "City") {
+        if (!dragged) clickCity();
+    }
 }
 function onKeyDown(event) {
     const key = event.key.toLowerCase();
-    if (key === "escape") {
-        retreatViewMode();
-    } else if (['w', 'a', 's', 'd'].includes(key)) {
-        cameraKeyInput(key, 1);
+    if (sceneMode == "City") {
+        if (key === "escape") {
+            retreatViewMode();
+        }
+    } else if (sceneMode == "Gallery") {
+        if (['w', 'a', 's', 'd'].includes(key)) {
+            cameraKeyInput(key, 1);
+        }
     }
 }
 function onKeyUp(event) {
     const key = event.key.toLowerCase();
-    if (['w', 'a', 's', 'd'].includes(key)) {
-        cameraKeyInput(key, 0);
+    if (sceneMode == "Gallery") {
+        if (['w', 'a', 's', 'd'].includes(key)) {
+            cameraKeyInput(key, 0);
+        }
     }
 }
 function onResize(event) {
