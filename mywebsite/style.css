@@ -1,0 +1,44 @@
+canvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+:root {
+    --main-text-color: rgba(250, 250, 250);
+    --main-bg-color: rgba(50, 25, 0, 0.8);
+    /*
+    --main-text-color: rgb(25, 25, 25);
+    --main-bg-color: rgba(250, 230, 200, 0.7);
+    --main-text-color: rgba(145, 225, 250);
+    --main-bg-color: rgba(40, 100, 110, 0.4);
+    */
+}
+#infoBox {
+    position: absolute;
+    width: 400px;
+    height: 500px;
+    left: max(50px, min(calc(50% + 300px), calc(100% - 450px)));
+    top: 100px;
+    border-style: solid;
+    border-color: var(--main-text-color);
+    background-color: var(--main-bg-color);
+    visibility: hidden;
+}
+#infoTitle {
+    width: 100%;
+    height: 50px;
+    border-bottom-style: solid;
+    border-color: var(--main-text-color);
+    font-size: 40px;
+    text-align: center;
+    font-family: fantasy;
+    color: var(--main-text-color);
+}
+#infoText {
+    width: 100%;
+    height: calc(100%-50px);
+    font-size: 20px;
+    font-family: fantasy;
+    color: var(--main-text-color);
+    margin:5px
+}
